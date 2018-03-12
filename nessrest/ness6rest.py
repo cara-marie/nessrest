@@ -628,12 +628,12 @@ class Scanner(object):
                     method="PUT", extra=families)
 
 ################################################################################
-    def scan_add(self, targets, template="custom", name="", start=""):
+    def scan_add(self, targets, tag="CLI", template="custom", name="", start=""):
         '''
         After building the policy, create a scan.
         '''
         self._scan_template_uuid(name=template)
-        self._scan_tag()
+        self._scan_tag(name=tag)
 
         # This makes the targets much more readable in the GUI, as it splits
         # them out to "one per line"
